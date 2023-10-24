@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/univox-students.github.io/wcr/static/css/main.eddd3981.css",
-    "main.js": "/univox-students.github.io/wcr/static/js/main.b9b9c083.js",
+    "main.js": "/univox-students.github.io/wcr/static/js/main.70d47e38.js",
     "static/js/787.fdad2fed.chunk.js": "/univox-students.github.io/wcr/static/js/787.fdad2fed.chunk.js",
     "static/media/temp_access.jpg": "/univox-students.github.io/wcr/static/media/temp_access.87e68a4ed959ae9f18e9.jpg",
     "static/media/mcr_room.jpg": "/univox-students.github.io/wcr/static/media/mcr_room.8aaecdc91bdd3319c844.jpg",
@@ -13,11 +13,11 @@
     "static/media/univ_192x192.png": "/univox-students.github.io/wcr/static/media/univ_192x192.cd2e5227c3705a48f4a0.png",
     "index.html": "/univox-students.github.io/wcr/index.html",
     "main.eddd3981.css.map": "/univox-students.github.io/wcr/static/css/main.eddd3981.css.map",
-    "main.b9b9c083.js.map": "/univox-students.github.io/wcr/static/js/main.b9b9c083.js.map",
+    "main.70d47e38.js.map": "/univox-students.github.io/wcr/static/js/main.70d47e38.js.map",
     "787.fdad2fed.chunk.js.map": "/univox-students.github.io/wcr/static/js/787.fdad2fed.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.eddd3981.css",
-    "static/js/main.b9b9c083.js"
+    "static/js/main.70d47e38.js"
   ]
 }
