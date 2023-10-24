@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import axios from "axios";
 
 import "../../utilities.css"
@@ -34,7 +34,7 @@ const PastCommittee = () => {
   console.log(previousComm)
 
   return (
-    <div className="CurrentComm-container">
+    <div className="PastComm-container">
         {previousComm.sort(
           (comm1, comm2) => {return comm1.attributes.preferredName > comm2.attributes.preferredName}
         ).map(
@@ -47,14 +47,14 @@ const PastCommittee = () => {
           }
 
           return (
-            <div key={comm.id} className="CurrentComm-single">
-              <Link to={`/profile/${comm.attributes.username}`} onClick={scrollToTop}>
-              <div className="CurrentComm-background" style={{backgroundImage: bG}}> </div>
-              <div className="CurrentComm-about"> 
+            <div key={comm.id} className="PastComm-single">
+              {/* <Link to={`/profile/${comm.attributes.username}`} onClick={scrollToTop}> */}
+              <div className="PastComm-background" style={{backgroundImage: bG}}> </div>
+              <div className="PastComm-about"> 
                   <div className="name"> <b>{comm.attributes.preferredName}</b> ({comm.attributes.preferredPronoun}) </div>
                   <div className="post"> {comm.attributes.wcrRole} </div>
               </div>
-              </Link>
+              {/* </Link> */}
             </div>
           )
         })}
