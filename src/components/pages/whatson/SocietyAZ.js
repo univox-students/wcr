@@ -26,7 +26,8 @@ const SocietyAZ = () => {
         university societies as well.</p>
         <ButtonFlex display={[
           {key: 1, isLocal: true, des: "Create a college society!", link: "/societies-supports"},
-          {key: 2, isLocal: false, des: "Info for hosting college events", link: roomBooking}
+          {key: 2, isLocal: false, des: "Room booking info", link: "https://intranet.univ.ox.ac.uk/sites/default/files/Pink%20Slip%20required%20information%2023-24%20-%2016%20Oct%2023.pdf"},
+          {key: 3, isLocal: false, des: "Check room capacities", link: "https://intranet.univ.ox.ac.uk/sites/default/files/Maximum%20Room%20Capacities%20-%20Oct%202023.pdf"}
         ]}/>
     </ContentBlock>
     <ContentBlock title="Societies A to Z">

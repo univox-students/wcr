@@ -43,7 +43,8 @@ const SupportSocieties = () => {
       <p><b>University clubs are not allowed to host events in the college unless booked by a college member 
         who is the president of the society. Event of such could not be advertised to general public.</b></p>
       <ButtonFlex display={[
-          {key: 1, isLocal: false, des: "Click here for latest room booking information", link: roomBooking}
+          {key: 1, isLocal: false, des: "Latest room booking info", link: "https://intranet.univ.ox.ac.uk/sites/default/files/Pink%20Slip%20required%20information%2023-24%20-%2016%20Oct%2023.pdf"},
+          {key: 2, isLocal: false, des: "Check room capacities", link: "https://intranet.univ.ox.ac.uk/sites/default/files/Maximum%20Room%20Capacities%20-%20Oct%202023.pdf"}
         ]}/>
     </ContentBlock>
     <ContentBlock title="Promotion on the WCR Website">
