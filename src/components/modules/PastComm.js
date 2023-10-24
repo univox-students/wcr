@@ -21,15 +21,15 @@ const PastCommittee = () => {
 
   useEffect(() => {fetchComm().then(console.log(previousComm));}, []);
 
-  const scrollToTop = () => {
-    setTimeout(
-      function () {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-      })
-    }, 50)
-  };
+  // const scrollToTop = () => {
+  //   setTimeout(
+  //     function () {
+  //     window.scrollTo({
+  //       top: 0,
+  //       behavior: "smooth"
+  //     })
+  //   }, 50)
+  // };
 
   console.log(previousComm)
 

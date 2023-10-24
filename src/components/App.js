@@ -18,6 +18,7 @@ import Society from "./pages/whatson/Society.js";
 import SocietyAZ from "./pages/whatson/SocietyAZ.js";
 import SupportSocieties from "./pages/whatson/SupportSocieties.js";
 import Profile from "./pages/Profile.js";
+import Contact from "./pages/Contact.js";
 
 import "../utilities.css";
 
@@ -70,6 +71,7 @@ const App = () => {
         <Route exact path="/societiesAtoZ" element={<SocietyAZ />} />
         <Route exact path="/events/:eventId" element={<Event />} />
         <Route exact path="/whatson" element={<WhatsOn />} />
+        <Route exact path="/contact" element={<Contact />} />
         <Route exact path="/privacyaccessibility" element={<Accessibility />} />
         <Route path="*" element={<NotFound />} />
       </Routes>

@@ -35,8 +35,8 @@ const BottomBanner = () => {
         </div>
         <div className="BottomBanner-sociallogo">
             <a href="mailto:wcr.externalaffairs@univ.ox.ac.uk"><i className="fa-regular fa-envelope fa-2x" title="email"></i></a>
-            <a href="https://www.facebook.com/groups/433253188107301"><i className="fa-brands fa-facebook fa-2x" title="facebook"></i></a>
-            <a href="https://www.instagram.com/univwcr/"><i className="fa-brands fa-instagram fa-2x" title="instagram"></i></a>
+            <a href="https://www.facebook.com/groups/1233897143993080"><i className="fa-brands fa-facebook fa-2x" title="facebook"></i></a>
+            {/* <a href="https://www.instagram.com/univwcr/"><i className="fa-brands fa-instagram fa-2x" title="instagram"></i></a> */}
         </div>
         <div className="BottomBanner-description"> 
             <p> © 2023 Weir Common Room, University College, Oxford </p>

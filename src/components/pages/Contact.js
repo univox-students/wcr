@@ -1,58 +1,38 @@
-import React, { Component } from "react";
+import React from "react";
 // import { Fade } from "react-awesome-reveal";
 
-import "../../index.css"
+import "../../utilities.css"
 import "./Contact.css";
 
-import Facebook from "../modules/Facebook.js"
-import mailIcon from "../../img/logo/envelop.svg";
-import facebookIcon from "../../img/logo/facebook.svg";
-import instaIcon from "../../img/logo/instagram.svg";
+import TopBanner from "../modules/TopBanner.js";
+import ContentBlock from "../modules/ContentBlock.js";
 
-class Contact extends Component {
-    constructor(props) {
-      super(props);
-      this.state = {};
-    }
-  
-    componentDidMount() {
-      // remember -- api calls go here!
-    }
-  
-    render() {
-      return (
-        <>
-        <div className="u-banner u-standard-banner Contact-banner">
-        </div>
-        {/* <Fade direction="up" triggerOnce> */}
-          <div className="u-block u-textCenter">
-            <h1> Contact Us </h1>
-            <div className="Contact-container">
-              <div className="Contact-logoAndDes"> 
-                <div> <img src={mailIcon} alt="mailing"/> </div>
-                <div className="Contact-Des"> 
-                  <a href="mailto:icrs@imperial.ac.uk"> icrs@imperial.ac.uk</a> 
-                </div>
-              </div>
-              <div className="Contact-logoAndDes"> 
-                <div> <img src={facebookIcon} alt="facebook"/> </div>
-                <div className="Contact-Des"> 
-                  <a href="https://www.facebook.com/ic.railway.transport">Imperial College Rail & Transport Society</a> 
-                </div>
-              </div>
-              <div className="Contact-logoAndDes"> 
-                <div> <img src={instaIcon} alt="instagram"/> </div>
-                <div className="Contact-Des"> 
-                  <a href="https://www.instagram.com/railandtransport/">railandtransport</a> 
-                </div>
-              </div>
-            </div>
-          </div>
-        {/* </Fade> */}
-        </>
-      );
-    }
-  }
-  
-  export default Contact;
+const Contact = () => {
+  return (
+    <>
+    <TopBanner bgColorKey="secondary" title="Contact" content="Contact Us" />
+    {/* <Fade direction="up" triggerOnce> */}
+    <ContentBlock title="Emails">
+      <p>Please contact us by one of the following emails:</p>
+      <ul>
+        <li>President: <a href="mailto:wcr.president@univ.ox.ac.uk">wcr.president@univ.ox.ac.uk</a></li>
+        <li>Vice-president / Treasurer: <a href="mailto:wcr.treasurer@univ.ox.ac.uk">wcr.treasurer@univ.ox.ac.uk</a> or <a href="mailto:mcr.vpresident@univ.ox.ac.uk">mcr.vpresident@univ.ox.ac.uk</a></li>
+        <li>Secretary: <a href="mailto:wcr.secretary@univ.ox.ac.uk">wcr.secretary@univ.ox.ac.uk</a></li>
+        <li>Welfare Officer: <a href="mailto:wcr.welfare@univ.ox.ac.uk">wcr.welfare@univ.ox.ac.uk</a></li>
+        <li>Entertainment (Social officer): <a href="mailto:wcr.entertainment@univ.ox.ac.uk">wcr.entertainment@univ.ox.ac.uk</a></li>
+        <li>LGBTQ+: <a href="mailto:wcr.lgbtq@univ.ox.ac.uk">wcr.lgbtq@univ.ox.ac.uk</a></li>
+        <li>International: <a href="mailto:wcr.international@univ.ox.ac.uk">wcr.international@univ.ox.ac.uk</a></li>
+        <li>Equality and Access: <a href="mailto:wcr.equality@univ.ox.ac.uk">wcr.equality@univ.ox.ac.uk</a></li>
+        <li>External Affairs / IT: <a href="mailto:wcr.externalaffairs@univ.ox.ac.uk">wcr.externalaffairs@univ.ox.ac.uk</a></li>
+      </ul>
+    </ContentBlock>
+    <ContentBlock title="Other contacts">
+      <p>Join our <a href="https://www.facebook.com/groups/1233897143993080">Facebook group</a>.</p>
+    </ContentBlock>
+    {/* </Fade> */}
+    </>
+  );
+};
+
+export default Contact;
   
