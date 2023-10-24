@@ -33,10 +33,10 @@ const Home = () => {
         title="Home" 
         content="Welcome to the University College WCR" />
       <ContentBlock title="The website grows with you!">
-        <p>The WCR will finally have its website again since its closure in 2019, as a 
-          celebration of the end of Covid and the revival of the community. The website is 
-          under active development. Therefore, information available here may not be up-to-date, 
-          and you are strongly advised to double check with the WCR members. The website may be down 
+        <p>The WCR is finally having its website again since 2019, as a celebration of the end of Covid 
+          and the revival of the postgraduate community of the University College, Oxford. The website is 
+          under active development, and information available here may not be up-to-date. 
+          You are strongly advised to double check with the <Link to="/governance">WCR members</Link>. The website may be down 
           from time to time for maintenance - we will try to inform you 48 hours before the 
           maintenance sessions. Feedbacks are welcomed: please share by 
           contacting <Link to="/profile/Samuel-CHLam">Samuel Chun Hei Lam</Link>, or attending the 
