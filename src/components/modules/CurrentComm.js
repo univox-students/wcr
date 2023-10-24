@@ -48,7 +48,7 @@ const CurrentCommittee = () => {
               <Link to={`/profile/${comm.username}`} onClick={scrollToTop}>
               <div className="CurrentComm-background" style={{backgroundImage: bG}}> </div>
               <div className="CurrentComm-about"> 
-                  <div className="name"> <b>{comm.preferredName}</b> ({comm.preferredPronoun}) </div>
+                  <div className="name"> <b>{comm.preferredName}</b> {comm.preferredPronoun && <>({comm.preferredPronoun})</>} </div>
                   <div className="post"> {comm.wcrRole} </div>
               </div>
               </Link>
