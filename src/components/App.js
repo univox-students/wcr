@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 
 import NavBar from "./modules/NavBar.js";
 import BottomBanner from "./modules/BottomBanner.js";
@@ -58,19 +58,19 @@ const App = () => {
     <Router>
       <NavBar />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/governance" element={<Governance />} />
-        <Route path="/profile/:userName" element={<Profile />} />
-        <Route path="/welfare" element={<Welfare />} />
-        <Route path="/welfare/welfarefaq" element={<WelfareFAQ />} />
-        <Route path="/welfare/whoswho" element={<WhosWho />} />
+        <Route exact path="/" element={<Home />} />
+        <Route exact path="/about" element={<About />} />
+        <Route exact path="/governance" element={<Governance />} />
+        <Route exact path="/profile/:userName" element={<Profile />} />
+        <Route exact path="/welfare" element={<Welfare />} />
+        <Route exact path="/welfare/welfarefaq" element={<WelfareFAQ />} />
+        <Route exact path="/welfare/whoswho" element={<WhosWho />} />
         <Route exact path="/societies-supports" element={<SupportSocieties />} />
         <Route exact path="/societies/:abbreviation" element={<Society />} />
         <Route exact path="/societiesAtoZ" element={<SocietyAZ />} />
-        <Route path="/events/:eventId" element={<Event />} />
+        <Route exact path="/events/:eventId" element={<Event />} />
         <Route exact path="/whatson" element={<WhatsOn />} />
-        <Route path="/privacyaccessibility" element={<Accessibility />} />
+        <Route exact path="/privacyaccessibility" element={<Accessibility />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <BottomBanner />

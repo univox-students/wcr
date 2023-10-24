@@ -6,7 +6,7 @@
   "description": "this is the permanent package for the website of the Weir Common Room of University College, Oxford.",
   "author": "Samuel-CHLam",
   "license": "ISC",
-  "homepage": "",
+  "homepage": "https://univox-students.github.io/wcr/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -24,7 +24,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --transformIgnorePatterns \"node_modules/(?!axios)/\"",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
