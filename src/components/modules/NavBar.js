@@ -112,7 +112,7 @@ function NavBar () {
           <ul className={click ? "navbar-menu active" : "navbar-menu"}>
 
             <li className="navbar-item" onMouseEnter={onMouseEnterWhatsOn} onMouseLeave={onMouseLeaveWhatsOn}> 
-              <Link to="/whatson" className="navbar-links">
+              <Link to="/whatson" className="navbar-links" onClick={scrollToTop}>
                 What's on <i className="fas fa-caret-down"/> </Link>
                 {dropdownWhatsOn && <NavBarDropdown menuItems={whatsOnSubpages} />}
             </li>
@@ -122,13 +122,13 @@ function NavBar () {
             </li> */}
 
             <li className="navbar-item" onMouseEnter={onMouseEnterAbout} onMouseLeave={onMouseLeaveAbout}> 
-              <Link to="/about" className="navbar-links">
+              <Link to="/about" className="navbar-links" onClick={scrollToTop}>
                 About <i className="fas fa-caret-down"/> </Link>
                 {dropdownAbout && <NavBarDropdown menuItems={aboutSubpages} />}
             </li>
 
             <li className="navbar-item" onMouseEnter={onMouseEnterWelfare} onMouseLeave={onMouseLeaveWelfare}> 
-              <Link to="/welfare" className="navbar-links">
+              <Link to="/welfare" className="navbar-links" onClick={scrollToTop}>
                 Welfare <i className="fas fa-caret-down"/> </Link>
                 {dropdownWelfare && <NavBarDropdown menuItems={welfareSubpages} />}
             </li>
