@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/univox-students.github.io/wcr/static/css/main.eddd3981.css",
+    "main.js": "/univox-students.github.io/wcr/static/js/main.b9b9c083.js",
+    "static/js/787.fdad2fed.chunk.js": "/univox-students.github.io/wcr/static/js/787.fdad2fed.chunk.js",
+    "static/media/temp_access.jpg": "/univox-students.github.io/wcr/static/media/temp_access.87e68a4ed959ae9f18e9.jpg",
+    "static/media/mcr_room.jpg": "/univox-students.github.io/wcr/static/media/mcr_room.8aaecdc91bdd3319c844.jpg",
+    "static/media/eurovision.png": "/univox-students.github.io/wcr/static/media/eurovision.ade0b78bccb28004998a.png",
+    "static/media/WCR_constitution_2018.pdf": "/univox-students.github.io/wcr/static/media/WCR_constitution_2018.5586f46139fea762d51f.pdf",
+    "static/media/pinkSlip.pdf": "/univox-students.github.io/wcr/static/media/pinkSlip.35b8d5f263f9bfc4d5f6.pdf",
+    "static/media/WCR_all_committee.jpg": "/univox-students.github.io/wcr/static/media/WCR_all_committee.8a56c0b3af35469580dc.jpg",
+    "static/media/oxLogo.svg": "/univox-students.github.io/wcr/static/media/oxLogo.2e163fe6eb7cb7b6e028590f6041ae7f.svg",
+    "static/media/univ_192x192.png": "/univox-students.github.io/wcr/static/media/univ_192x192.cd2e5227c3705a48f4a0.png",
+    "index.html": "/univox-students.github.io/wcr/index.html",
+    "main.eddd3981.css.map": "/univox-students.github.io/wcr/static/css/main.eddd3981.css.map",
+    "main.b9b9c083.js.map": "/univox-students.github.io/wcr/static/js/main.b9b9c083.js.map",
+    "787.fdad2fed.chunk.js.map": "/univox-students.github.io/wcr/static/js/787.fdad2fed.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.eddd3981.css",
+    "static/js/main.b9b9c083.js"
+  ]
+}
