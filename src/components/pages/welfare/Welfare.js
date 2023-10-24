@@ -9,6 +9,11 @@ import Image from "../../modules/Image.js";
 import ButtonFlex from "../../modules/ButtonFlex.js";
 
 import TopBannerImage from "../../../img/topbanner/mcr_room.jpg";
+import AllCommImage from "../../../img/topbanner/WCR_all_committee.jpg";
+import EuroVisionImage from "../../../img/topbanner/eurovision.png";
+import PeerSupporterImage from "../../../img/peerSupporterMT23.png";
+import YogaImage from "../../../img/genericYoga.jpg";
+import WelfareWeekImage from "../../../img/Welfare-Week-begins.jpg"
 
 const Welfare = () => {
   return (
@@ -37,28 +42,31 @@ const Welfare = () => {
         </p>
         <div className="u-gridPic-2">
           <Image title="WCR Welfare committee members" 
-                src="" 
+                src={AllCommImage} 
                 opacity={.5}
                 isBlack={Boolean(true)}
                 aspect="16/9"
                 suppressArrow={Boolean(false)}
                 des="The WCR welfare committee members, including the welfare officer and other representatives, could act as your first contact for your welfare concerns."
                 linkdes="/governance"
-                isLocal={Boolean(true)}/>
+                isLocal={Boolean(true)}
+                altText="Photo of all WCR committees"/>
           <Image title="Peer supporters" 
-                src=""
+                src={PeerSupporterImage}
                 opacity={.5}
                 isBlack={Boolean(true)}
                 aspect="16/9"
                 suppressArrow={Boolean(false)}
                 des="They are well-trained students to address your specific welfare concerns."
-                linkdes="#"
-                isLocal={Boolean(true)}
+                linkdes="https://intranet.univ.ox.ac.uk/sites/default/files/Peer%20Supporter%20poster%20MT23.pdf"
+                isLocal={Boolean(false)}
+                altText="Photo of all peer supporters"
                 />
         </div>
         <ButtonFlex display={[
           {key: 1, isLocal: true, des: "Welfare FAQ", link: "/welfareFAQ"},
-          {key: 2, isLocal: false, des: "Official welfare booklet", link: "https://intranet.univ.ox.ac.uk/sites/default/files/Student%20Welfare%20Full%20Guide%2003%20Jan%202023.pdf"}
+          {key: 2, isLocal: false, des: "Official welfare guide", link: "https://intranet.univ.ox.ac.uk/sites/default/files/Student%20Welfare%20Full%20Guide%2027%20Sept%202023.pdf"},
+          {key: 3, isLocal: false, des: "Where to look for help?", link: "https://intranet.univ.ox.ac.uk/sites/default/files/Where%20to%20go%20for%20help%20leaflet%20MT2023.pdf"}
         ]}/>
       </ContentBlock>
 
@@ -68,7 +76,7 @@ const Welfare = () => {
         </p>
         <div className="u-gridPic-3">
           <Image title="Welfare week" 
-                src="" 
+                src={WelfareWeekImage}
                 opacity={.5}
                 isBlack={Boolean(true)}
                 aspect="16/9"
@@ -77,10 +85,11 @@ const Welfare = () => {
                 so called mid-term/5th week blue due to the academic stresses. Therefore, 
                 the WCR and the college organise different activities during the week to 
                 help you relax."
-                linkdes="/governance"
-                isLocal={Boolean(true)}/>
+                linkdes="/whatson"
+                isLocal={Boolean(true)}
+                altText="Someone pouring coffee"/>
           <Image title="Yoga sessions" 
-                src=""
+                src={YogaImage}
                 opacity={.5}
                 isBlack={Boolean(true)}
                 aspect="16/9"
@@ -89,9 +98,10 @@ const Welfare = () => {
                 help you relax by enjoying Yoga."
                 linkdes="#"
                 isLocal={Boolean(true)}
+                altText="Photo of Yoga"
                 />
           <Image title="Weekly socials" 
-                src=""
+                src={EuroVisionImage}
                 opacity={.5}
                 isBlack={Boolean(true)}
                 aspect="16/9"
@@ -100,6 +110,7 @@ const Welfare = () => {
                 with your graduates and enjoy some delicious wine and cheese."
                 linkdes="#"
                 isLocal={Boolean(true)}
+                altText="Photo of WCR members watching eurovision"
                 />
         </div>
       </ContentBlock>

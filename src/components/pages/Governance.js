@@ -3,7 +3,6 @@ import React from "react";
 
 import "../../utilities.css"
 import "./Governance.css";
-import TopBannerImage from "../../img/topbanner/WCR_all_committee.jpg";
 
 import TopBanner from "../modules/TopBanner.js";
 import ContentBlock from "../modules/ContentBlock.js";
@@ -11,6 +10,8 @@ import CurrentCommittee from "../modules/CurrentComm.js";
 import PastCommittee from "../modules/PastComm.js";
 import ButtonFlex from "../modules/ButtonFlex.js";
 import constitutionPDF from "../../data/WCR_constitution_2018.pdf";
+
+import TopBannerImage from "../../img/topbanner/WCR_all_committee.jpg";
 
 const Governance = () => {
 
