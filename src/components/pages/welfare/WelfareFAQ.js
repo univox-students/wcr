@@ -6,6 +6,7 @@ import "./WelfareFAQ.css";
 import TopBanner from "../../modules/TopBanner.js";
 import ContentBlock from "../../modules/ContentBlock.js";
 import emergencyConcerns from "../../../data/emergencyConcerns.js";
+import ButtonFlex from "../../modules/ButtonFlex.js";
 
 import TopBannerImage from "../../../img/topbanner/mcr_room.jpg";
 
@@ -93,7 +94,12 @@ const WelfareFAQ = () => {
       </ContentBlock>
 
       <ContentBlock title="Non-emergency concerns">
-        <p>Please click on one of the following tabs for contact information.</p>
+        <p>We are still working on the content. Please refer to the welfare guides for information.</p>
+        <ButtonFlex display={[
+          {key: 1, isLocal: true, des: "Return to welfare page", link: "/welfare"},
+          {key: 2, isLocal: false, des: "Official welfare guide", link: "https://intranet.univ.ox.ac.uk/sites/default/files/Student%20Welfare%20Full%20Guide%2027%20Sept%202023.pdf"},
+          {key: 3, isLocal: false, des: "Where to look for help?", link: "https://intranet.univ.ox.ac.uk/sites/default/files/Where%20to%20go%20for%20help%20leaflet%20MT2023.pdf"}
+        ]}/>
       </ContentBlock>
     </>
   );
