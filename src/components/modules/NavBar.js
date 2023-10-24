@@ -155,6 +155,8 @@ function NavBar () {
                 // <button onClick={() => {login();}}> Login using Google </button>
               )}
             </li> */}
+            <li className="navbar-item"><a href="https://www.univ.ox.ac.uk/" className="navbar-links">College website</a></li>
+            <li className="navbar-item"><a href="https://www.universitycollegeball.com" className="navbar-links">Univ Ball 2024</a></li>
           </ul>
       </nav>
     </>
