@@ -42,8 +42,8 @@ Rank by price
 | Baseline (Wix Core) \* | £168 | £504 |
 | Baseline (Wordpress Business) \* | £240 | £720 |
 
-\* Not capable of current website architecture (would take too much time to develop a new website).
-\*\* Limited flexibility of webpage design.
+\* Not capable of current website architecture (would take too much time to develop a new website). <br>
+\*\* Limited flexibility of webpage design. <br>
 \# Under 3-year saving plan
 
 ### Plan A: Hosting with the JCR/UniVox server
