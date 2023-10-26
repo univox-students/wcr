@@ -37,9 +37,9 @@ Rank by price
 | C (Current state) | £100 | £300 |
 | B (AWS) | £140 | £420 |
 | Baseline (Squarespace Personal) \* | £144 | £432 |
-| C (Upgraded) | £300 | £900 |
 | Baseline (Wix Core) \* | £168 | £504 |
 | Baseline (Wordpress Business) \* | £240 | £720 |
+| C (Upgraded) | £300 | £900 |
 
 \* Not capable of current website architecture (would take too much time to develop a new website).
 \# Limited flexibility of webpage design.
