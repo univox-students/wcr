@@ -23,7 +23,9 @@ Search from https://domains.squarespace.com/
 | Domain Name | Pricing/year | Pricing to request for 3 years |
 | :-- | :-- | :-- |
 | univoxstudent.com | £9.6 | £28.8 |
+| univwcr.com / univmcr.com | £16 | £48 |
 | univoxstudent.co.uk | £16 | £48 |
+| univwcr.co.uk | £16 | £48 |
 
 ## Permanent hosting solution
 
@@ -32,16 +34,17 @@ Rank by price
 | Plans | Pricing/year | Pricing to request for 3 years |
 | :-- | :-- | :-- |
 | A (JCR/UniVox server) | Unknown | Unknown |
-| Baseline (Wordpress Premium) \* \# | £84 | £252 |
+| Baseline (Wordpress Premium) \* \*\* | £84 | £252 |
 | Baseline (Wix Basic) \* | £90 | £270 |
 | C (Current state) | £100 | £300 |
-| B (AWS) | £140 | £420 |
+| B (AWS) \# | £140 | £420 |
 | Baseline (Squarespace Personal) \* | £144 | £432 |
 | Baseline (Wix Core) \* | £168 | £504 |
 | Baseline (Wordpress Business) \* | £240 | £720 |
 
 \* Not capable of current website architecture (would take too much time to develop a new website).
-\# Limited flexibility of webpage design.
+\*\* Limited flexibility of webpage design.
+\# Under 3-year saving plan
 
 ### Plan A: Hosting with the JCR/UniVox server
 The JCR currently owns a server that is hosting UniVox, an in-college social media. We could potentially share the server with JCR. 
