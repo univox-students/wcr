@@ -23,7 +23,7 @@ Search from https://domains.squarespace.com/
 | Domain Name | Pricing/year | Pricing to request for 3 years |
 | :-- | :-- | :-- |
 | univoxstudent.com | £9.6 | £28.8 |
-| univwcr.com / univmcr.com | £9.6 | £48 |
+| univwcr.com / univmcr.com | £9.6 | £28.8 |
 | univoxstudent.co.uk | £16 | £48 |
 | univwcr.co.uk | £16 | £48 |
 
