@@ -39,7 +39,6 @@ Rank by price
 | Baseline (Squarespace Personal) \* | £144 | £432 |
 | Baseline (Wix Core) \* | £168 | £504 |
 | Baseline (Wordpress Business) \* | £240 | £720 |
-| C (Upgraded) | £300 | £900 |
 
 \* Not capable of current website architecture (would take too much time to develop a new website).
 \# Limited flexibility of webpage design.
@@ -90,7 +89,7 @@ Disadvantage
 - not robust: we have to wake the CMS up everytime we visit the website, this means we have a long loading time. Also not good for scaling up the website (if we have too many events)
 - the backend api is public: mostly ok when we don't store sensitive information on the website, but would be an issue if we want to decentralise the website further
 
-**Remark:** there is an option for upgrading Heroku to [Standard 1X](https://www.heroku.com/pricing) plan $25/months to avoid the idle issue of CMS. We will enjoy a 512MB bandwith (half of the AWS plan). The total price for this option is $30/month, or $360/months.
+**Remark:** there is an option for upgrading Heroku, see [new pricing](https://www.heroku.com/pricing). Unfortunately the other Heroku options are unreasonably expensive for WCR.
 
 ### Wix is the cheapest, why not Wix?
 - limited decentralisation (2 collaboration accounts), difficult to maintain
