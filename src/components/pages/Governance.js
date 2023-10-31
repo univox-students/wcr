@@ -20,10 +20,9 @@ const Governance = () => {
 
     {/* <Fade cascade={true} direction="up" triggerOnce> */}
     <ContentBlock title="Governance">
-      <p>The WCR is governed by a committee of graduate students, who pay their timeless 
-      efforts to serve, advocate for and represent the interests of the graduate student 
-      body within the College and the University. They also run exciting social events 
-      (including BOPs), providing welfare support and promoting environmental awareness. 
+      <p>The WCR is governed by a committee of graduate students who advocate for and represent the 
+        interests of the graduate student body within the College and the University. They also 
+        run exciting social events (including BOPs), providing welfare support and promoting environmental awareness. 
       The WCR committee binds with the constitution, and is elected at the end of the 
       Hilary (second) Term each year.</p>
       <ButtonFlex display={[
