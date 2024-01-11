@@ -33,6 +33,7 @@ const Home = () => {
         title="Home" 
         content="Welcome to the University College WCR" />
       <ContentBlock title="The website grows with you!">
+        <p><b>Schedule maintenance of WCR website: from 13 January 2024 (Saturday) 12am, expected to last for 24 hours.</b> During maintenance, some parts of the website might not be accessible.</p>
         <p>The WCR is finally having its website again since 2019, as a celebration of the end of Covid 
           and the revival of the postgraduate community of the University College, Oxford. The website is 
           under active development, and information available here may not be up-to-date. 
