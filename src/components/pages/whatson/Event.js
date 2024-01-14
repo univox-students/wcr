@@ -19,7 +19,7 @@ const Event = () => {
 
   const getEvent = async () => {
     const BaseURL = "https://samuelchlam.herokuapp.com/api"
-    const response = await axios.get(`${BaseURL}/events/${eventId}?populate=natures&populate=banner&populate=wcrContacts&populate=prevCommContacts` 
+    const response = await axios.get(`${BaseURL}/events/${eventId}?populate=natures&populate=banner&populate=profiles` 
       ).then().catch((e) => console.log(e));
     setEvent(response.data.data.attributes);
   };
@@ -33,13 +33,18 @@ const Event = () => {
         <Markdown>{event.description}</Markdown>
       </ContentBlock>
       <ContentBlock title="Contacts">
-        <h2>MCR Contacts</h2>
-        <ul>
-          {event.wcrContacts && event.wcrContacts.data.map((item, idx) => <li key={idx}><Link to={`/profile/${item.attributes.username}`}>{item.attributes.preferredName}</Link></li>)}
-          {event.prevCommContacts && event.prevCommContacts.data.map((item, idx) => <li key={idx}>{item.attributes.preferredName}</li>)}
-        </ul>
-        <h2>Other Contacts</h2>
-        <Markdown>{event.otherContacts}</Markdown>
+        <div className="u-gridPic-2">
+          <div>
+            <h2>MCR Contacts</h2>
+            <ul>
+              {event.profiles && event.profiles.data.map((item, idx) => <li key={idx}><Link to={`/profile/${item.attributes.username}`}>{item.attributes.preferredName}</Link></li>)}
+            </ul>
+          </div>
+          <div>
+            <h2>Other Contacts</h2>
+            <Markdown>{event.otherContacts}</Markdown>
+          </div>
+        </div>
       </ContentBlock>
     </>
   );

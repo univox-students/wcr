@@ -224,7 +224,7 @@ button {
 
 @media (min-width: 680px) {
   .u-gridPic-2 {
-    max-width: 66%;
+    max-width: 100%;
     grid-template-columns: repeat(2, 1fr);
   }
 }
