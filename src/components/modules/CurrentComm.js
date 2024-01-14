@@ -12,10 +12,10 @@ const CurrentCommittee = () => {
   const [currentComm, setCurrentComm] = useState([]);
 
   const fetchComm = async () => {
-    const resCurrent = await axios.get(`https://samuelchlam.herokuapp.com/api/users?populate[role][fields][0]=type&filters[role][type][$eq]=wcr_committee_member&populate[profilePicture][fields][0]=url`
+    const resCurrent = await axios.get(`https://samuelchlam.herokuapp.com/api/profiles?filters[wcrRole]=Committee&populate[profilePicture][fields][0]=url`
       ).then().catch(e => {console.log(e)});
 
-    setCurrentComm(resCurrent.data);
+    setCurrentComm(resCurrent.data.data);
   };
 
   useEffect(() => {fetchComm();}, []);
@@ -32,24 +32,25 @@ const CurrentCommittee = () => {
 
   return (
     <div className="CurrentComm-container">
-        {currentComm.sort(
+        { /* sort(
           (comm1, comm2) => {return comm1.orderOfDisplay > comm2.orderOfDisplay}
-        ).map(
+        ) */
+        currentComm.map(
           (comm) => { 
           let bG
-          if (comm.profilePicture) {
-            bG = `url("${comm.profilePicture.url}")`;
+          if (comm.attributes.profilePicture) {
+            bG = `url("${comm.attributes.profilePicture.data.attributes.url}")`;
           } else {
             bG = `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("${default_img_src}")`;
           }
 
           return (
             <div key={comm.id} className="CurrentComm-single">
-              <Link to={`/profile/${comm.username}`} onClick={scrollToTop}>
+              <Link to={`/profile/${comm.attributes.username}`} onClick={scrollToTop}>
               <div className="CurrentComm-background" style={{backgroundImage: bG}}> </div>
               <div className="CurrentComm-about"> 
-                  <div className="name"> <b>{comm.preferredName}</b> {comm.preferredPronoun && <>({comm.preferredPronoun})</>} </div>
-                  <div className="post"> {comm.wcrRole} </div>
+                  <div className="name"> <b>{comm.attributes.preferredName}</b> {comm.attributes.preferredPronoun && <>({comm.attributes.preferredPronoun})</>} </div>
+                  <div className="post"> {comm.attributes.wcrCommitteeRole} </div>
               </div>
               </Link>
             </div>

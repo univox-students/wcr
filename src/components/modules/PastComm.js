@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import axios from "axios";
 
 import "../../utilities.css"
@@ -13,7 +13,7 @@ const PastCommittee = () => {
 
   const fetchComm = async () => {
     const resPrevious = await axios.get(
-      `https://samuelchlam.herokuapp.com/api/prev-comms?populate[profilePicture][fields][0]=url`
+      `https://samuelchlam.herokuapp.com/api/profiles?filters[wcrRole]=Previous%20Committee&populate[profilePicture][fields][0]=url`
       ).then().catch(e => {console.log(e)});
 
     setPreviousComm(resPrevious.data.data);
@@ -21,15 +21,15 @@ const PastCommittee = () => {
 
   useEffect(() => {fetchComm().then(console.log(previousComm));}, []);
 
-  // const scrollToTop = () => {
-  //   setTimeout(
-  //     function () {
-  //     window.scrollTo({
-  //       top: 0,
-  //       behavior: "smooth"
-  //     })
-  //   }, 50)
-  // };
+  const scrollToTop = () => {
+    setTimeout(
+      function () {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      })
+    }, 50)
+  };
 
   console.log(previousComm)
 
@@ -48,13 +48,13 @@ const PastCommittee = () => {
 
           return (
             <div key={comm.id} className="PastComm-single">
-              {/* <Link to={`/profile/${comm.attributes.username}`} onClick={scrollToTop}> */}
+              <Link to={`/profile/${comm.attributes.username}`} onClick={scrollToTop}>
               <div className="PastComm-background" style={{backgroundImage: bG}}> </div>
               <div className="PastComm-about"> 
                   <div className="name"> <b>{comm.attributes.preferredName}</b> ({comm.attributes.preferredPronoun}) </div>
-                  <div className="post"> {comm.attributes.wcrRole} </div>
+                  <div className="post"> {comm.attributes.wcrCommitteeRole} </div>
               </div>
-              {/* </Link> */}
+              </Link>
             </div>
           )
         })}
