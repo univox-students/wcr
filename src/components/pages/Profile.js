@@ -20,15 +20,15 @@ const Profile = () => {
   const fetchUser = async () => {
     setIsLoading(true);
 
-    const resUser = await axios.get(`https://samuelchlam.herokuapp.com/api/users?filters[username][$eq]=${userName}&populate=profilePicture`);
+    const resUser = await axios.get(`https://samuelchlam.herokuapp.com/api/profiles?filters[username]=${userName}&populate=profilePicture`);
     const resEngage = await axios.get(`https://samuelchlam.herokuapp.com/api/univ-engagements?populate[user][fields][0]=username&filters[user][username][$eq]=${userName}`);
 
     // const resUser = await axios.get('http://localhost:1337/api/prev-comms').then(console.log("user")).catch(e => console.log(e));
     // const resEngage = await axios.get(`http://localhost:1337/api/univ-engagements?populate[prevComm][fields][0]=username&filters[prevComm][username][$eq]=Jacob-Ridley`).then(console.log("engage")).catch(e => console.log(e));
     
-    console.log(resUser.data[0])
+    console.log(resUser.data.data[0])
 
-    setCurrentUser(resUser.data[0]);
+    setCurrentUser(resUser.data.data[0]);
     setCurrentEngage(resEngage.data.data);
     setIsLoading(false);
   };
@@ -72,7 +72,7 @@ const Profile = () => {
       </ContentBlock>
 
       <ContentBlock title="Personal introduction">
-        <Markdown>{currentUser.personalIntro}</Markdown>
+        <Markdown>{currentUser.attributes.personalIntro}</Markdown>
       </ContentBlock>
     </>
   );
