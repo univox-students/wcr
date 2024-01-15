@@ -7,10 +7,12 @@ import "../../utilities.css"
 import "./Home.css";
 
 import TopBanner from "../modules/TopBanner.js";
-import TopBannerImage from "../../img/topbanner/eurovision.png";
 import EventShortDes from "../modules/EventShortDes.js";
 import Image from "../modules/Image.js";
 import ContentBlock from "../modules/ContentBlock.js";
+
+import TopBannerImage from "../../img/topbanner/eurovision.png";
+import TermCard from "../../img/termcard_HT24.png";
 
 // const axios = require("axios");
 
@@ -33,7 +35,6 @@ const Home = () => {
         title="Home" 
         content="Welcome to the University College WCR" />
       <ContentBlock title="The website grows with you!">
-        <p><b>Schedule maintenance of WCR website: from 13 January 2024 (Saturday) 12am, expected to last for 24 hours.</b> During maintenance, some parts of the website might not be accessible.</p>
         <p>The WCR is finally having its website again since 2019, as a celebration of the end of Covid 
           and the revival of the postgraduate community of the University College, Oxford. The website is 
           under active development, and information available here may not be up-to-date. 
@@ -44,8 +45,8 @@ const Home = () => {
           open WCR committee meeting.
         </p>
       </ContentBlock>
-      <div className="u-block">
-        <h1 className="u-section-title">Upcoming Events</h1>
+      <ContentBlock title="Upcoming Events">
+      <div>For more events, check out our <Link to="/whatson">What's on</Link> page or refer to the termcard below.</div>
         <div className="u-gridPic-3">
           {events.filter(
             (item) => new Date(item.attributes.startDate) > new Date()
@@ -67,7 +68,12 @@ const Home = () => {
                 )}
             )}
         </div>
-      </div>
+      </ContentBlock>
+      <ContentBlock title="WCR Termcard">
+        <div className="home-termcard-container">
+          <img src={TermCard} style={{width: "100%"}} altText="Please refer to the what's on page for an accessible version of the list of events."/>
+        </div>
+      </ContentBlock>
     </>
   );
 }
