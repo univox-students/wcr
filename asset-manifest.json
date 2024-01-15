@@ -1,12 +1,13 @@
 {
   "files": {
-    "main.css": "/wcr/static/css/main.796be752.css",
-    "main.js": "/wcr/static/js/main.b60516ce.js",
+    "main.css": "/wcr/static/css/main.eb9a49c6.css",
+    "main.js": "/wcr/static/js/main.293f952b.js",
     "static/js/787.fdad2fed.chunk.js": "/wcr/static/js/787.fdad2fed.chunk.js",
     "static/media/temp_access.jpg": "/wcr/static/media/temp_access.87e68a4ed959ae9f18e9.jpg",
     "static/media/mcr_room.jpg": "/wcr/static/media/mcr_room.8aaecdc91bdd3319c844.jpg",
     "static/media/eurovision.png": "/wcr/static/media/eurovision.ade0b78bccb28004998a.png",
     "static/media/peerSupporterMT23.png": "/wcr/static/media/peerSupporterMT23.de8e7baeb5484b99adcf.png",
+    "static/media/termcard_HT24.png": "/wcr/static/media/termcard_HT24.ac94950a4477472e034a.png",
     "static/media/WCR_constitution_2018.pdf": "/wcr/static/media/WCR_constitution_2018.5586f46139fea762d51f.pdf",
     "static/media/genericYoga.jpg": "/wcr/static/media/genericYoga.6ed6819beb22f06460db.jpg",
     "static/media/Welfare-Week-begins.jpg": "/wcr/static/media/Welfare-Week-begins.e15c36a1eb23bc0ec033.jpg",
@@ -15,12 +16,12 @@
     "static/media/oxLogo.svg": "/wcr/static/media/oxLogo.2e163fe6eb7cb7b6e028590f6041ae7f.svg",
     "static/media/univ_192x192.png": "/wcr/static/media/univ_192x192.cd2e5227c3705a48f4a0.png",
     "index.html": "/wcr/index.html",
-    "main.796be752.css.map": "/wcr/static/css/main.796be752.css.map",
-    "main.b60516ce.js.map": "/wcr/static/js/main.b60516ce.js.map",
+    "main.eb9a49c6.css.map": "/wcr/static/css/main.eb9a49c6.css.map",
+    "main.293f952b.js.map": "/wcr/static/js/main.293f952b.js.map",
     "787.fdad2fed.chunk.js.map": "/wcr/static/js/787.fdad2fed.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.796be752.css",
-    "static/js/main.b60516ce.js"
+    "static/css/main.eb9a49c6.css",
+    "static/js/main.293f952b.js"
   ]
 }
