@@ -25,7 +25,7 @@ const WhatsOn = () => {
   const catToColor = [
     {key: "College Official", bkgColor: "rgba(251,189,26,.3)"},
     {key: "Common Room", bkgColor: "rgba(91,206,250,.3)"},
-    {key: "Student Society", bkgColor: "rgb(26,111,43,.3)"},
+    {key: "Student Society", bkgColor: "rgba(26,111,43,.3)"},
     {key: "Other", bkgColor: "rgb(170,170,170)"},
   ]
 

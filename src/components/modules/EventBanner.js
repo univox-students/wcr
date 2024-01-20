@@ -14,7 +14,7 @@ import "./EventBanner.css";
 const catToColor = [
   {key: "College Official", bkgColor: "251,189,26", textColor: "rgb(0,59,121)"},
   {key: "Common Room", bkgColor: "0,59,121", textColor: "#FFF"},
-  {key: "Student Society", bkgColor: "255,87,51", textColor: "#FFF"},
+  {key: "Student Society", bkgColor: "26,111,43", textColor: "#FFF"},
   {key: "Other", bkgColor: "69,69,69", textColor: "#FFF"},
 ];
 
