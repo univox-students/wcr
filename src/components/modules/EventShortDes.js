@@ -14,7 +14,10 @@ import "./EventShortDes.css";
 const EventShortDes = ({attributes}) => {
 
   return (
-    <>
+    <section style={{
+      paddingInline: ".5rem",
+      paddingBottom: ".5rem",
+    }}>
       <div>
         <b>{attributes.title} </b> 
         {attributes.natures.data && attributes.natures.data.map(
@@ -28,8 +31,8 @@ const EventShortDes = ({attributes}) => {
               {key: "Other", bkgColor: "rgb(69,69,69)", textColor: "#FFF"},
               {key: "Social", bkgColor: "rgb(148,18,118)", textColor: "#FFF"},
               {key: "Sports", bkgColor: "rgb(0,59,121)", textColor: "#FFF"},
-              {key: "Welfare", bkgColor: "#539728", textColor: "#FFF"},
-              {key: "Equality and Access", bkgColor: "#539728", textColor: "#FFF"},
+              {key: "Welfare", bkgColor: "rgb(83,151,40)", textColor: "#FFF"},
+              {key: "Equality and Access", bkgColor: "black", textColor: "#FFF"},
               {key: "LGBTQ+", bkgColor: "#F5A9B8", textColor: "rgb(0,59,121)"},
             ];
 
@@ -64,7 +67,7 @@ const EventShortDes = ({attributes}) => {
       )
       }
       </div>
-    </>
+    </section>
     );
   }
 
