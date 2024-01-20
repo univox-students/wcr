@@ -34,7 +34,7 @@ const SupportSocieties = () => {
         <li>the <Link to="/governance">WCR President</Link> if you wish to book the WCR, and/or</li>
         <li>your fellow housemates if you want to host your event in your accommodations.</li>
       </ul>
-      <h2>Step 2:</h2>
+      <h2>Step 2: Completing the pink slip</h2>
       <p>  
         You should then complete the "pink slip" at 
         the <a href="https://intranet.univ.ox.ac.uk">college intranet</a>, abiding the 
