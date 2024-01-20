@@ -9,8 +9,6 @@ import TopBanner from "../../modules/TopBanner.js";
 import ContentBlock from "../../modules/ContentBlock.js";
 import ButtonFlex from "../../modules/ButtonFlex.js";
 
-import roomBooking from "../../../data/pinkSlip.pdf"
-
 const SupportSocieties = () => {
 
   return (<>
@@ -24,11 +22,22 @@ const SupportSocieties = () => {
     </ContentBlock>
     <ContentBlock title="IMPORTANT: Room Booking Regulation">
       <p>Make sure to abide with the room booking regulations if you wish to host event 
-        within the college. In particular, you should first contact the domestic bursary 
-        at <a href="mailto:hospitality@univ.ox.ac.uk">hospitality@univ.ox.ac.uk</a> to check availability 
-        of college premises, or your fellow housemates if you want to host your event in 
-        accommodations. You should then complete the "pink slip" at 
-        the <a href="intranet.univ.ox.ac.uk">college intranet</a>, abiding the 
+        within the college.</p>
+      <h2>Step 1: Preliminary Contacts</h2>
+      <p>Before submitting event registration (aka the "pink slip"), you should 
+        first contact:</p>
+      <ul>
+        <li>the domestic bursary 
+          at <a href="mailto:hospitality@univ.ox.ac.uk">hospitality@univ.ox.ac.uk</a> to 
+        check availability of rooms and obtain a reference number,</li>
+        <li>the <a href="https://www.univjcr.com/committee">JCR President</a> if you wish to book the JCR,</li>
+        <li>the <Link to="/governance">WCR President</Link> if you wish to book the WCR, and/or</li>
+        <li>your fellow housemates if you want to host your event in your accommodations.</li>
+      </ul>
+      <h2>Step 2:</h2>
+      <p>  
+        You should then complete the "pink slip" at 
+        the <a href="https://intranet.univ.ox.ac.uk">college intranet</a>, abiding the 
         following deadlines: (last updated: Michaelmas 2023)</p>
       <ul>
         <li>10 full working days for events held in college bars</li>
@@ -50,7 +59,7 @@ const SupportSocieties = () => {
     <ContentBlock title="Promotion on the WCR Website">
       <p>Any societies that are led by WCR members, or having sufficient involvement in WCR could 
         create a page in this WCR website for promotion. Please contact 
-        the <Link to="/profile/Samuel-CHLam">external affairs officer</Link> or 
+        the <Link to="/governance">external affairs officer</Link> or 
         email <a href="mailto:wcr.externalaffairs@univ.ox.ac.uk">wcr.externalaffairs@univ.ox.ac.uk</a> if 
         you wish to do so. Please include the following details:
       </p>
@@ -64,12 +73,12 @@ const SupportSocieties = () => {
         <li>Links of promotion: website, Facebook, Instagram, Twitter, WhatsApp group</li>
       </ul>
       <p>The JCR also has an independent listing of the website. You can enquire by contacting 
-        the <Link to="/profile/Samuel-CHLam">external affairs officer</Link> or 
+        the <Link to="/governance">external affairs officer</Link> or 
         email <a href="mailto:wcr.externalaffairs@univ.ox.ac.uk">wcr.externalaffairs@univ.ox.ac.uk</a> for more information.</p>
     </ContentBlock>
     <ContentBlock title="WCR Funding">
       <p>Any societies that are led by WCR members, or having sufficient involvement in WCR could apply funding from WCR. Please contact 
-        the <Link to="/profile/Lovisa-Reiche">Treasurer</Link> <b>separately</b> for information. Applications of funding 
+        the <Link to="/governance">Treasurer</Link> <b>separately</b> for information. Applications of funding 
         will be discussed during a WCR committee meeting.
       </p>
     </ContentBlock>
