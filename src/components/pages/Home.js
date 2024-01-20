@@ -71,7 +71,7 @@ const Home = () => {
       </ContentBlock>
       <ContentBlock title="WCR Termcard">
         <div className="home-termcard-container">
-          <img src={TermCard} style={{width: "100%"}} altText="Please refer to the what's on page for an accessible version of the list of events."/>
+          <img src={TermCard} style={{width: "100%"}} alt="Please refer to the what's on page for an accessible version of the list of events."/>
         </div>
       </ContentBlock>
     </>
