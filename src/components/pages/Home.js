@@ -21,9 +21,16 @@ const Home = () => {
 
   const getEvents = async () => {
     const BaseURL = "https://samuelchlam.herokuapp.com/api"
-    const response = await axios.get(`${BaseURL}/events?sort=startDate&pagination[pageSize]=50&populate=banner&populate=mainContact&populate=natures`);
+    const response = await axios.get(`${BaseURL}/events?sort=startDate&pagination[pageSize]=100&populate=banner&populate=mainContact&populate=natures`);
     setEvents(response.data.data);
   };
+
+  const catToColor = [
+    {key: "College Official", bkgColor: "rgba(251,189,26,.3)"},
+    {key: "Common Room", bkgColor: "rgba(91,206,250,.3)"},
+    {key: "Student Society", bkgColor: "rgba(26,111,43,.3)"},
+    {key: "Other", bkgColor: "rgb(170,170,170)"},
+  ]
 
   useEffect(() => {getEvents();}, []);
 
@@ -62,6 +69,7 @@ const Home = () => {
                     aspect="16/9"
                     suppressArrow={Boolean(true)}
                     des={<EventShortDes attributes={item.attributes}/>}
+                    desBkg={catToColor.find((obj) => {return obj.key === item.attributes.category}).bkgColor}
                     linkdes={`/events/${item.id}`}
                     isLocal={Boolean(true)}
                     altText={item.attributes.banner.data ? item.attributes.banner.data.attributes.alternativeText : ""}/>
