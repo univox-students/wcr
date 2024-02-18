@@ -25,9 +25,9 @@ const ProfileBasicInfo = ( {userObj} ) => {
                 <p>Subject <br/> <b>{userObj.attributes.subject}</b></p>
                 <p>Joined Univ Since <br/><b>{userObj.attributes.joinedUnivSince}</b></p>
                 <p>
-                  <a href={`mailto:${userObj.attributes.email}`}><i className="fa-solid fa-envelope fa-3x"></i></a>
-                  {userObj.univIntroLink && (<a href={userObj.univIntroLink}><img src={default_img_src} style={{width: 40, margin: 0, padding: 0}} alt="martlet"/></a>)}
-                  {userObj.websiteLink && (<a href={userObj.websiteLink}><i className="fa-solid fa-globe fa-3x"></i></a>)}
+                  {userObj.attributes.email && <a href={`mailto:${userObj.attributes.email}`}><i className="fa-solid fa-envelope fa-3x"></i></a>}
+                  {userObj.attributes.univIntro && (<a href={userObj.attributes.univIntro}><img src={default_img_src} style={{width: 40, margin: 0, padding: 0}} alt="martlet"/></a>)}
+                  {userObj.attributes.website && (<a href={userObj.attributes.website}><i className="fa-solid fa-globe fa-3x"></i></a>)}
                 </p>
             </div>
         </div>
