@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/wcr/static/css/main.eb9a49c6.css",
-    "main.js": "/wcr/static/js/main.871b0aad.js",
+    "main.css": "/wcr/static/css/main.7e82c1ed.css",
+    "main.js": "/wcr/static/js/main.2b5e2c61.js",
     "static/js/787.fdad2fed.chunk.js": "/wcr/static/js/787.fdad2fed.chunk.js",
     "static/media/temp_access.jpg": "/wcr/static/media/temp_access.87e68a4ed959ae9f18e9.jpg",
     "static/media/mcr_room.jpg": "/wcr/static/media/mcr_room.8aaecdc91bdd3319c844.jpg",
@@ -16,12 +16,12 @@
     "static/media/oxLogo.svg": "/wcr/static/media/oxLogo.2e163fe6eb7cb7b6e028590f6041ae7f.svg",
     "static/media/univ_192x192.png": "/wcr/static/media/univ_192x192.cd2e5227c3705a48f4a0.png",
     "index.html": "/wcr/index.html",
-    "main.eb9a49c6.css.map": "/wcr/static/css/main.eb9a49c6.css.map",
-    "main.871b0aad.js.map": "/wcr/static/js/main.871b0aad.js.map",
+    "main.7e82c1ed.css.map": "/wcr/static/css/main.7e82c1ed.css.map",
+    "main.2b5e2c61.js.map": "/wcr/static/js/main.2b5e2c61.js.map",
     "787.fdad2fed.chunk.js.map": "/wcr/static/js/787.fdad2fed.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.eb9a49c6.css",
-    "static/js/main.871b0aad.js"
+    "static/css/main.7e82c1ed.css",
+    "static/js/main.2b5e2c61.js"
   ]
 }
