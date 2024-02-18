@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import axios from "axios";
 import Markdown from "react-markdown";
 
@@ -38,7 +38,7 @@ const Profile = () => {
   if (isLoading) {
     <>
       <TopBanner title="" content="Loading!" />
-      <div className="u-block">Thank you for your patience.</div>
+      <section className="u-block">Thank you for your patience.</section>
     </>
   }
 
@@ -46,7 +46,11 @@ const Profile = () => {
     return (
       <>
         <TopBanner title="" content="This profile does not exist." />
-        <div className="u-block">Please contact us for further assistance.</div>
+        <ContentBlock title="Please wait patiently as the website loads">
+          <section>
+            Please <Link to="/contact">contact us</Link> if the problem still persist.
+          </section>
+        </ContentBlock>
       </>
     )
   }
@@ -55,7 +59,7 @@ const Profile = () => {
     <>
       <ProfileBanner title="Profile" userObj={currentUser} bgColorKey="secondary" />
       <ContentBlock title="Univ Engagement">
-        <div className="profile-engagement-container">
+        <section className="profile-engagement-container">
           {currentEngage.sort((item1, item2) => {return (item2.attributes.startDate > item1.attributes.startDate)}).map((item, idx) => {
             const startYear = new Date(item.attributes.startDate);
             const endYear = item.attributes.endDate ? new Date(item.attributes.endDate) : "";
@@ -68,11 +72,13 @@ const Profile = () => {
               }
             )
           }
-        </div>
+        </section>
       </ContentBlock>
 
       <ContentBlock title="Personal introduction">
-        <Markdown>{currentUser.attributes.personalIntro}</Markdown>
+        <section className="profile-intro">
+          <Markdown>{currentUser.attributes.personalIntro}</Markdown>
+        </section>
       </ContentBlock>
     </>
   );

@@ -11,6 +11,10 @@
     margin-inline: 0
 }
 
+.profile-intro {
+    width: 100%
+}
+
 @media (min-width: 960px) {
     .profile-engagement-container {
         width: 55%;
@@ -22,6 +26,10 @@
         background-color: var(--grey);
         padding: 1.5ch;
         margin-inline: .75ch;
+    }
+
+    .profile-intro {
+        width: 55%
     }
 }
 
