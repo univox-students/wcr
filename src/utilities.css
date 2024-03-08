@@ -16,6 +16,15 @@
 
 /* List of fonts - Lato, OpenSans, Nobile*/
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Nobile:ital,wght@1,500&family=Open+Sans&display=swap');
+@font-face {
+  font-family: 'Gill Sans Nova';
+  src: url('https://fw.univox.social/Gill-Sans-Nova-Book.ttf');
+}
+
+@font-face {
+  font-family: 'Trajan';
+  src: url('https://univox.social/fonts/TrajanusRoman.ttf');
+}
 
 :root {
   --primary: rgb(0,59,121);
@@ -39,13 +48,13 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Gill Sans Nova", sans-serif;
   font-weight: 300;
   font-size: 1.11rem;
 }
 
 h1,h2,h3,h4,h5,h6 {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Gill Sans Nova", sans-serif;
   margin-top: 0;
   letter-spacing: -.025rem;
 }
