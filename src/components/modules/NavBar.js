@@ -6,20 +6,11 @@ import NavBarDropdown from "./NavBarDropdown.js";
 import "../../utilities.css";
 import "./NavBar.css";
 
-import univLogo from "../../img/logo/univ_192x192.png";
+import univLogo from "../../img/logo/univ_badge.png";
 import constitutionPDF from "../../data/WCR_constitution_2018.pdf";
 
 function NavBar () {
-  // ( userId, handleLogin, handleLogout )
-
-  const displayminwidth = 960;
-
-  // // login
-  // const login = useGoogleLogin({
-  //   onSuccess: () => handleLogin,
-  //   onError: err => console.log(err),
-  //   flow: 'auth-code',
-  // });
+  const displayminwidth = 1080;
 
   // hamburger menu
   const [click, setClick] = useState(false);
@@ -97,67 +88,55 @@ function NavBar () {
   return (
     <>
       <nav className="navbar-container">
-          <div >
-            <Link to="/" className="navbar-title u-inlineBlock" onClick={scrollToTop}>
-              <div className="navbar-logo-container"> <img src={univLogo} className="navbar-logo" alt="martlet"/> </div>
-              <span className="navbar-title-full">University College, Oxford <br/> Weir Common Room</span> 
-              <span className="navbar-title-short">Univ WCR</span> 
-            </Link>
-          </div>
+        <Link to="/" className="navbar-title" onClick={scrollToTop}>
+          <img src={univLogo} className="navbar-logo" alt="martlet"/> 
+          <div className="navbar-title-full">
+            <p className="navbar-univ">University College, Oxford</p> 
+            <p className="navbar-wcr">Weir Common Room</p>
+          </div> 
+          <div className="navbar-title-short">Univ WCR</div> 
+        </Link>
 
-          <div className="navbar-menu-icon" onClick={() => setClick(!click)}>
-            <i className={click ? "fas fa-times" : "fas fa-bars"}/>
-          </div>
+        <div className="navbar-menu-icon" onClick={() => setClick(!click)}>
+          <i className={click ? "fas fa-times" : "fas fa-bars"}/>
+        </div>
 
-          <ul className={click ? "navbar-menu active" : "navbar-menu"}>
+        <ul className={click ? "navbar-menu active" : "navbar-menu"}>
 
-            <li className="navbar-item" onMouseEnter={onMouseEnterWhatsOn} onMouseLeave={onMouseLeaveWhatsOn}> 
-              <Link to="/whatson" className="navbar-links" onClick={scrollToTop}>
-                What's on <i className="fas fa-caret-down"/> </Link>
-                {dropdownWhatsOn && <NavBarDropdown menuItems={whatsOnSubpages} />}
-            </li>
+          <li className="navbar-item" onMouseEnter={onMouseEnterWhatsOn} onMouseLeave={onMouseLeaveWhatsOn}> 
+            <Link to="/whatson" className="navbar-links" onClick={scrollToTop}>
+              What's on <i className="fas fa-caret-down"/> </Link>
+              {dropdownWhatsOn && <NavBarDropdown menuItems={whatsOnSubpages} />}
+          </li>
 
-            {/* <li className="navbar-item" onClick={collapseAfterClick}> 
-              <Link to="/news" className="navbar-links">News</Link>
-            </li> */}
+          {/* <li className="navbar-item" onClick={collapseAfterClick}> 
+            <Link to="/news" className="navbar-links">News</Link>
+          </li> */}
 
-            <li className="navbar-item" onMouseEnter={onMouseEnterAbout} onMouseLeave={onMouseLeaveAbout}> 
-              <Link to="/about" className="navbar-links" onClick={scrollToTop}>
-                About <i className="fas fa-caret-down"/> </Link>
-                {dropdownAbout && <NavBarDropdown menuItems={aboutSubpages} />}
-            </li>
+          <li className="navbar-item" onMouseEnter={onMouseEnterAbout} onMouseLeave={onMouseLeaveAbout}> 
+            <Link to="/about" className="navbar-links" onClick={scrollToTop}>
+              About <i className="fas fa-caret-down"/> </Link>
+              {dropdownAbout && <NavBarDropdown menuItems={aboutSubpages} />}
+          </li>
 
-            <li className="navbar-item" onMouseEnter={onMouseEnterWelfare} onMouseLeave={onMouseLeaveWelfare}> 
-              <Link to="/welfare" className="navbar-links" onClick={scrollToTop}>
-                Welfare <i className="fas fa-caret-down"/> </Link>
-                {dropdownWelfare && <NavBarDropdown menuItems={welfareSubpages} />}
-            </li>
+          <li className="navbar-item" onMouseEnter={onMouseEnterWelfare} onMouseLeave={onMouseLeaveWelfare}> 
+            <Link to="/welfare" className="navbar-links" onClick={scrollToTop}>
+              Welfare <i className="fas fa-caret-down"/> </Link>
+              {dropdownWelfare && <NavBarDropdown menuItems={welfareSubpages} />}
+          </li>
 
-            {/* <li className="navbar-item" onMouseEnter={onMouseEnterEA} onMouseLeave={onMouseLeaveEA}> 
-              <Link to="/externalaffairs" className="navbar-links">
-                External Affairs <i className="fas fa-caret-down"/> </Link>
-                {dropdownEA && <NavBarDropdown menuItems={eaSubpages} />}
-            </li> */}
+          {/* <li className="navbar-item" onMouseEnter={onMouseEnterEA} onMouseLeave={onMouseLeaveEA}> 
+            <Link to="/externalaffairs" className="navbar-links">
+              External Affairs <i className="fas fa-caret-down"/> </Link>
+              {dropdownEA && <NavBarDropdown menuItems={eaSubpages} />}
+          </li> */}
 
-            <li className="navbar-item"> 
-              <Link to="/contact" className="navbar-links" onClick={collapseAfterClick}>Contact Us</Link></li>
+          <li className="navbar-item"> 
+            <Link to="/contact" className="navbar-links" onClick={collapseAfterClick}>Contact Us</Link></li>
 
-            {/* {userId ? (
-              <li className="navbar-item">
-                <Link to=`/profile/{username}` className="navbar-links" onClick = {collapseAfterClick}>Your profile</Link></li>
-            ) : (<></>)} */}
-
-            {/* <li className="navbar-item">
-              {userId ? (
-                <button onClick={() => {googleLogout(); handleLogout();}}> Logout </button>
-              ) : (
-                <GoogleLogin onSuccess={handleLogin} onError={(err) => console.log(err)} />
-                // <button onClick={() => {login();}}> Login using Google </button>
-              )}
-            </li> */}
-            <li className="navbar-item"><a href="https://www.univ.ox.ac.uk/" className="navbar-links">College website</a></li>
-            <li className="navbar-item"><a href="https://www.universitycollegeball.com" className="navbar-links">Univ Ball 2024</a></li>
-          </ul>
+          <li className="navbar-item"><a href="https://www.univ.ox.ac.uk/" className="navbar-links">College website</a></li>
+          <li className="navbar-item"><a href="https://www.universitycollegeball.com" className="navbar-links">Univ Ball 2024</a></li>
+        </ul>
       </nav>
     </>
   );

@@ -1,8 +1,8 @@
-/* Trigger value - 1240px */
+/* Trigger value - 1080px */
 
 .navbar-container {
     background-color: var(--primary);
-    height: 80px;
+    height: 112px;
     box-shadow: 0 8px 10px -6px rgb(49, 49, 49);
     z-index: 1;
     position: sticky;
@@ -12,18 +12,12 @@
     justify-content: space-between;
     align-items: center;
   }
-  
+
 .navbar-title {
   display: flex;
-  flex-direction: row;
-  justify-self: start;
-  justify-content: center;
-  align-items: center;
   cursor: pointer;
   text-decoration: none;
-  padding: var(--s) 0;
   color: white;
-  font-family: "Open Sans";
 }
 
 .navbar-title:hover, .navbar-title:visited {
@@ -34,17 +28,33 @@
   display: inline;
 }
 
+.navbar-univ {
+  padding: 0;
+
+  /* If using Trajan font then use the code below to adjust spacings. */
+  font-family: "Trajan", "Open Sans", "San Serif";
+  font-variant: small-caps;
+  line-height: 25px;
+  word-spacing: -.6ch;
+  margin-inline: 0;
+  margin-top: .5rem;
+  margin-bottom: -.5rem;
+
+  /* Otherwise, use the following code. */
+  /* margin: 0; */
+}
+
+.navbar-wcr {
+  margin: 0;
+  padding: 0;
+}
+
 .navbar-title-short {
   display: none;
 }
 
-.navbar-logo-container {
-  margin-right: 1ch;
-  padding-top: .5rem;
-  padding-bottom: .5rem;
-}
-
 .navbar-logo {
+  margin-right: 1.75rem;
   height: 56px;
 }
 
@@ -97,7 +107,7 @@
     width: 100%;
     grid-gap: 0;
     position: absolute;
-    top: 80px;
+    top: 112px;
     left: -100%;
     opacity: 1;
     transition: all 0.5s ease;
@@ -149,6 +159,7 @@
   }
   
   .navbar-title-short {
-    display: inline;
+    display: block;
+    padding: 1.5ch 0;
   }
 }
