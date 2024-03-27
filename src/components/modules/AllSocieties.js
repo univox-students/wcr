@@ -39,7 +39,7 @@ const AllSocieties = () => {
           
           let bG
           
-          if (soc.attributes.banner) {
+          if (soc.attributes.banner.data) {
             bG = `url("${soc.attributes.banner.data.attributes.url}")`;
           } else {
             bG = `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("${default_img_src}")`;

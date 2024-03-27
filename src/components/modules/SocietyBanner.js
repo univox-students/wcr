@@ -15,15 +15,15 @@ const SocietyBanner = ( {societyObj} ) => {
   let finalKey = societyObj.nature || "Other"
   let bgStyle = {};
   
-  try {
+  if (societyObj.banner) {
     bgStyle = {backgroundImage: `linear-gradient(rgba(0,0,0,0.5), 
-      rgba(0,0,0,0.5)), 
-      url(${societyObj.banner.data.attributes.url})`};
-  } catch {
+       rgba(0,0,0,0.5)), 
+       url(${societyObj.banner.data.attributes.url})`};
+  } else {
     bgStyle = {
       backgroundColor: "black",
     };
-  }
+  };
   
   const tagToColor = [
     {key: "Academic Related", bkgColor: "rgb(229,52,44)", textColor: "#FFF"},
@@ -49,12 +49,11 @@ const SocietyBanner = ( {societyObj} ) => {
               </h1>
             </div>
             <div className="societybanner-right">
-              <p> Also known as: <b>{societyObj.shortName}</b> <span className="societybanner-nature" style={{
+              <p> Also known as: <b>{societyObj.shortName}</b> <br/>
+                  Nature: <span className="societybanner-nature" style={{
                   backgroundColor: tagToColor.find((obj) => {return obj.key === finalKey}).bkgColor,
                   color: tagToColor.find((obj) => {return obj.key === finalKey}).textColor,
-                }}>
-                  Nature: {societyObj.nature}
-                </span> 
+                }}> {societyObj.nature}</span> 
               </p>
 
               {societyObj.mailingList && <a 

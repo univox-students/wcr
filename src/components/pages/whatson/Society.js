@@ -18,7 +18,7 @@ const Society = () => {
   const [society, setSociety] = useState({});
 
   const getSociety = async () => {
-    const BaseURL = "https://samuelchlam.herokuapp.com/api";
+    const BaseURL = "https://wcr.univ.ox.ac.uk/strapi/api";
     const resSoc = await axios.get(`${BaseURL}/societies?filters[abbreviation][$eq]=${abbreviation}` + 
       "&populate[profiles][fields][0]=username&populate[profiles][fields][1]=preferredName" + 
       "&populate[banner][fields][0]=url"
