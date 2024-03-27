@@ -20,13 +20,9 @@ const Profile = () => {
   const fetchUser = async () => {
     setIsLoading(true);
 
-    const resUser = await axios.get(`https://samuelchlam.herokuapp.com/api/profiles?filters[username]=${userName}&populate=profilePicture`);
-    const resEngage = await axios.get(`https://samuelchlam.herokuapp.com/api/univ-engagements?populate[user][fields][0]=username&filters[profile][username][$eq]=${userName}`);
-
-    // const resUser = await axios.get('http://localhost:1337/api/prev-comms').then(console.log("user")).catch(e => console.log(e));
-    // const resEngage = await axios.get(`http://localhost:1337/api/univ-engagements?populate[prevComm][fields][0]=username&filters[prevComm][username][$eq]=Jacob-Ridley`).then(console.log("engage")).catch(e => console.log(e));
-    
-    console.log(resUser.data.data[0])
+    const BaseURL = "https://wcr.univ.ox.ac.uk/strapi/api";
+    const resUser = await axios.get(`${BaseURL}/profiles?filters[username]=${userName}&populate=profilePicture`);
+    const resEngage = await axios.get(`${BaseURL}/univ-engagements?populate[user][fields][0]=username&filters[profile][username][$eq]=${userName}`);
 
     setCurrentUser(resUser.data.data[0]);
     setCurrentEngage(resEngage.data.data);
