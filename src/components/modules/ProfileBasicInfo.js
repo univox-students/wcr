@@ -14,12 +14,17 @@ import "./ProfileBasicInfo.css";
 import default_img_src from "../../img/logo/univ_192x192.png";
 
 const ProfileBasicInfo = ( {userObj} ) => {
+
   return (
         <div>
-            <div style={
+            {userObj.attributes.profilePicture.data ? <div style={
               {backgroundImage: `url(${userObj.attributes.profilePicture.data.attributes.url})`}} 
               className="u-image u-aspect-43" 
-              title={userObj.attributes.profilePicture.data.attributes.alternativeText}> </div>
+              title={userObj.attributes.profilePicture.data.attributes.alternativeText}> </div> : <div style={
+                {backgroundImage: `url(${default_img_src})`, backgroundColor: "white"}} 
+                className="u-image u-aspect-43" 
+                title="Univ logo"> </div>}
+            
             <div className="profilebasicinfo-basic">
                 <p>Current Role <br/> <b>{userObj.attributes.wcrRole}</b> <br/> <b>{userObj.attributes.wcrCommitteeRole}</b></p>
                 <p>Subject <br/> <b>{userObj.attributes.subject}</b></p>
