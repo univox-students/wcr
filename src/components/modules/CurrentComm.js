@@ -12,7 +12,8 @@ const CurrentCommittee = () => {
   const [currentComm, setCurrentComm] = useState([]);
 
   const fetchComm = async () => {
-    const resCurrent = await axios.get(`https://samuelchlam.herokuapp.com/api/profiles?filters[wcrRole]=Committee&populate[profilePicture][fields][0]=url`
+    const BaseURL = "https://wcr.univ.ox.ac.uk/strapi/api";
+    const resCurrent = await axios.get(`${BaseURL}/profiles?filters[wcrRole]=Committee&populate[profilePicture][fields][0]=url`
       ).then().catch(e => {console.log(e)});
 
     setCurrentComm(resCurrent.data.data);
@@ -38,7 +39,7 @@ const CurrentCommittee = () => {
         currentComm.map(
           (comm) => { 
           let bG
-          if (comm.attributes.profilePicture) {
+          if (comm.attributes.profilePicture.data) {
             bG = `url("${comm.attributes.profilePicture.data.attributes.url}")`;
           } else {
             bG = `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("${default_img_src}")`;

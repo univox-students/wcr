@@ -12,7 +12,7 @@ const AllSocieties = () => {
   const [societies, setSocieties] = useState([]);
 
   const fetchComm = async () => {
-    const BaseURL = "https://samuelchlam.herokuapp.com/api";
+    const BaseURL = "https://wcr.univ.ox.ac.uk/strapi/api";
     const resSocieties = await axios.get(
       `${BaseURL}/societies?populate=banner`).then().catch(e => {console.log(e)});
     setSocieties(resSocieties.data.data);
