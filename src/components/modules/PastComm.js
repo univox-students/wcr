@@ -12,14 +12,15 @@ const PastCommittee = () => {
   const [previousComm, setPreviousComm] = useState([]);
 
   const fetchComm = async () => {
+    const BaseURL = "https://wcr.univ.ox.ac.uk/strapi/api";
     const resPrevious = await axios.get(
-      `https://samuelchlam.herokuapp.com/api/profiles?filters[wcrRole]=Previous%20Committee&populate[profilePicture][fields][0]=url`
+      `${BaseURL}/profiles?filters[wcrRole]=Previous%20Committee&populate[profilePicture][fields][0]=url`
       ).then().catch(e => {console.log(e)});
 
     setPreviousComm(resPrevious.data.data);
   };
 
-  useEffect(() => {fetchComm().then(console.log(previousComm));}, []);
+  useEffect(() => {fetchComm()}, []);
 
   const scrollToTop = () => {
     setTimeout(
@@ -31,8 +32,6 @@ const PastCommittee = () => {
     }, 50)
   };
 
-  console.log(previousComm)
-
   return (
     <div className="PastComm-container">
         {previousComm.sort(
@@ -40,7 +39,7 @@ const PastCommittee = () => {
         ).map(
           (comm) => { 
           let bG
-          if (comm.attributes.profilePicture) {
+          if (comm.attributes.profilePicture.data) {
             bG = `url("${comm.attributes.profilePicture.data.attributes.url}")`;
           } else {
             bG = `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("${default_img_src}")`;
