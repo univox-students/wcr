@@ -22,39 +22,7 @@ import Contact from "./pages/Contact.js";
 
 import "../utilities.css";
 
-// import { get, post } from "../utilities";
-
 const App = () => {
-  // const [userId, setUserId] = useState(undefined);
-  // const [currentUser, setCurrentUser] = useState(undefined);
-
-  // useEffect(() => {
-  //   get("/api/whoami").then((user) => {
-  //     if (user._id) {
-  //       // they are registerd in the database, and currently logged in.
-  //       setUserId(user.googleid)
-  //       // setCurrentUser(user)
-  //       console.log(`You are currently logged in as ${user.name}`)
-  //     }
-  //   });
-  // }, []);
-
-  // const handleLogin = (credentialResponse) => {
-  //   const userToken = credentialResponse.credential;
-  //   const decodedCredential = jwt_decode(userToken);
-  //   console.log(`Logged in as ${decodedCredential.name}`);
-  //   post("/api/login", { token: userToken }).then((user) => {
-  //     setUserId(user.googleid);
-  //   });
-  // };
-
-  // const handleLogout = () => {
-  //   setUserId(undefined);
-  //   post("/api/logout");
-  // };
-
-  // console.log(currentUser);
-
   return (
     <Router>
       <NavBar />
