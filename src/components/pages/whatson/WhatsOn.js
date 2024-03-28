@@ -7,6 +7,8 @@ import Image from "../../modules/Image.js";
 import TopBanner from "../../modules/TopBanner.js";
 import EventShortDes from "../../modules/EventShortDes.js";
 
+import default_img_src from "../../../img/logo/univ_192x192.png";
+
 import "../../../utilities.css"
 import "./WhatsOn.css";
 import "../NotFound.css";
@@ -15,7 +17,7 @@ const WhatsOn = () => {
   const [events, setEvents] = useState([]);
 
   const getEvents = async () => {
-    const BaseURL = "https://samuelchlam.herokuapp.com/api"
+    const BaseURL = "https://wcr.univ.ox.ac.uk/strapi/api"
     const response = await axios.get(`${BaseURL}/events?sort=startDate&pagination[pageSize]=200&populate=banner&populate=mainContact&populate=natures`);
     setEvents(response.data.data);
   };
@@ -43,7 +45,7 @@ const WhatsOn = () => {
                   <Image 
                     key={item.id}
                     title="" 
-                    src={item.attributes.banner.data ? item.attributes.banner.data.attributes.url : ""}
+                    src={item.attributes.banner.data ? item.attributes.banner.data.attributes.url : default_img_src}
                     opacity={item.attributes.banner.data ? 1 : .5}
                     isBlack={Boolean(true)}
                     aspect="16/9"

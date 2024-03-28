@@ -5,6 +5,7 @@ import Markdown from "react-markdown";
 import { Link } from "react-router-dom";
 // import { Fade } from "react-awesome-reveal";
 
+import TopBanner from "../../modules/TopBanner.js";
 import EventBanner from "../../modules/EventBanner.js";
 import ContentBlock from "../../modules/ContentBlock.js";
 
@@ -18,15 +19,16 @@ const Event = () => {
   const [event, setEvent] = useState({});
 
   const getEvent = async () => {
-    const BaseURL = "https://samuelchlam.herokuapp.com/api"
-    const response = await axios.get(`${BaseURL}/events/${eventId}?populate=natures&populate=banner&populate=profiles` 
-      ).then().catch((e) => console.log(e));
-    setEvent(response.data.data.attributes);
+    const BaseURL = "https://wcr.univ.ox.ac.uk/strapi/api"
+    const res = await axios.get(`${BaseURL}/events/${eventId}?populate=natures&populate=banner&populate=profiles` 
+      ).then( response => setEvent(response.data.data.attributes)
+      ).catch((e) => console.log(e));
   };
 
   useEffect(() => {getEvent();}, []);
 
   return (
+    event.title ? (
     <>
       <EventBanner eventObj={event} />
       <ContentBlock title="Description">
@@ -46,7 +48,15 @@ const Event = () => {
           </div>
         </div>
       </ContentBlock>
-    </>
+    </> ) : (
+    <>
+      <TopBanner title="Event" content="Event not found!" />
+      <ContentBlock title="Your requested event could not be found.">
+        <section>
+        Please navigate to your desired page using the navigation bar.
+        </section>
+      </ContentBlock>
+    </> )
   );
 };
   

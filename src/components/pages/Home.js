@@ -20,7 +20,7 @@ const Home = () => {
   const [events, setEvents] = useState([]);
 
   const getEvents = async () => {
-    const BaseURL = "https://samuelchlam.herokuapp.com/api"
+    const BaseURL = "https://wcr.univ.ox.ac.uk/strapi/api"
     const response = await axios.get(`${BaseURL}/events?sort=startDate&pagination[pageSize]=100&populate=banner&populate=mainContact&populate=natures`);
     setEvents(response.data.data);
   };
